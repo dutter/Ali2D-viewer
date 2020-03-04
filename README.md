@@ -10,7 +10,7 @@ A simple python script for pretty plotting of Ali2D text output (alignment + pre
 
 ## Basic usage:
 #### Step 1: Download your Ali2D results
-When the run is completed, the rightmost tab "Text Output" is the information you want. Click 'Download' in the window below, or copy/paste the text output into a new plain text file.
+When the run is completed, the rightmost tab "Text Output" is the information you want. Click 'Download' in the pane below, or copy/paste the text output into a new plain text file.
 
 #### Step 2: Run Ali2D_viewer.py with basic options
 The basic Ali2D_viewer.py functionality is invoked with `Ali2D_viewer.py -i ali2d_results.out`. This will generate a plot, with default number of positions per line, and save it in a pdf file at `ali2d_results.pdf` with default dimensions.
