@@ -19,10 +19,11 @@ Some useful flags for controlling the output:
 * `--wrap N` sets N as the number of positions per line before wrapping to another chunk. Default is 180 residues/line
 * `--width N` and `--height M` specify the width and height of the plot
 * `--output OUTFILE` can specify the name of the saved pdf
+* Other options for text size and so forth can be found in the help, `Ali2D_viewer.py --help`
 
 #### Some notes for posterity
 Underscores in sequence name are translated to spaces
 
-As Ali2D uses the : character to separate the key from the object, colons should be avoided in sequence names
+As Ali2D uses the `:` character to separate the key from the object, colons should be avoided in sequence names
 
 The red/blue color scheme was chosen to be visually similar to the Ali2D HTML viewer but can be changed by passing different colors as 0-1 RGB triplets as 'r,g,b' to `--color_helix` and `--color_sheet`, like `--color_helix '0,1,0` would make the alpha helix confidences scale from white to green.
