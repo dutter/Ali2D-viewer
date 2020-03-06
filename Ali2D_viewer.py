@@ -15,8 +15,8 @@ parser.add_argument("-o","--output",
                     help="Where to save the .pdf image [default: INPUT.pdf from INPUT.txt]", default="")
 parser.add_argument("-w","--wrap",
                     help="How many positions to print per line before wrapping [default: 180]", default=180, type=int)
-parser.add_argument("-W", "--width", help="Width of figure to save [default: 12]", default=12, type=int)
-parser.add_argument("-H", "--height", help="Height of figure to save [default: 8]", default=8, type=int)
+parser.add_argument("-W", "--width", help="Width of figure to save [default: 12]", default=12, type=float)
+parser.add_argument("-H", "--height", help="Height of figure to save [default: 8]", default=8, type=float)
 parser.add_argument("-s","--size_aa",
                     help="Font size in pt for position in alignment [default: 5]", default=5)
 parser.add_argument("-S","--size_name",
