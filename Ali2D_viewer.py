@@ -22,7 +22,7 @@ parser.add_argument("-S","--size_name",
                     help="Font size in pt for names of sequences [default: 7]", default=7)
 parser.add_argument("--color_helix", default='0.9,0.4,0.4',
                     help="Comma-separated RGB color for max alpha helix confidence, default is '0.9,0.4,0.4'")
-parser.add_argument("--color_sheet", default='0.3,0.3,0.9',
+parser.add_argument("--color_sheet", default='0.4,0.4,0.9',
                     help="Comma-separated RGB color for max beta sheet confidence, default is '0.3,0.3,0.9'")
 
 args=parser.parse_args()
@@ -52,7 +52,7 @@ conf = aln.loc[[x for x in list(aln.index.values) if re.search(r"^confi", x )],0
 conf = [list(re.sub(' ','', re.sub('-','0', x))) for x in conf]
 conf = np.array(conf, dtype='float32').__truediv__(9)  # rescale 0-9:0-1 for alpha
 
-residues = aln.loc[[x for x in list(aln.index.values) if re.search(r"^seq[a-z0-9]$",x)],0]
+residues = aln.loc[[x for x in list(aln.index.values) if re.search(r"^seq[a-z0-9]*$",x)],0]
 residues = np.array([list(re.sub(" ", "", x)) for x in residues])
 
 structure = aln.loc[[x for x in list(aln.index.values) if re.search(r"^seq_struct", x )],0]
