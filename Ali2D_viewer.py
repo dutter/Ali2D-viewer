@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from matplotlib import colors
 import numpy as np
 import pandas as pd
+import warnings
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-i","--input",
@@ -124,6 +125,9 @@ bcb.set_ticklabels(np.arange(10))
 acb.ax.set_title(r'$\alpha$')
 bcb.ax.set_title(r'$\beta$')
 
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore", UserWarning)
+    plt.tight_layout(pad=1, h_pad=0.2, rect=(0,0,0.91,1))
 
 plt.savefig(fname=args.output)
 
